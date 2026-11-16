@@ -1,0 +1,16 @@
+/assets/streams/*/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+/assets/streams/**/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+/assets/streams/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+
+/assets/streams/*/*.ts
+  Content-Type: video/mp2t
+/assets/streams/**/*.ts
+  Content-Type: video/mp2t
+/assets/streams/*.ts
+  Content-Type: video/mp2t
+
+/assets/resume/*.pdf
+  Content-Type: application/pdf

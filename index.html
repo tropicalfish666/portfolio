@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#20181B"><meta name="description" content="Tropicalfish Portfolio，真人短剧、动画、原创短片与广告影像作品。">
+<link rel="preload" href="assets/fonts/SmileySans-Oblique.woff2" as="font" type="font/woff2" crossorigin><title>Back to 2005 / Tropicalfish Portfolio</title><link rel="stylesheet" href="style.css?v=38">
+</head>
+<body>
+<div id="film-transport" aria-hidden="true"><svg preserveAspectRatio="none"><path id="film-matte" fill="#1a1a1a" fill-rule="evenodd"/></svg><div class="transport-rail transport-left"><div class="transport-holes"></div></div><div class="transport-rail transport-right"><div class="transport-holes"></div></div></div>
+<a class="skip" href="#gallery">跳转到胶片浏览</a>
+<div id="scene" class="has-video-background"><div class="ambient-surface" aria-hidden="true"><svg width="0" height="0"><linearGradient id="worn-chrome" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#ad4770"/><stop offset=".18" stop-color="#39413e"/><stop offset=".34" stop-color="#b7c4b5"/><stop offset=".42" stop-color="#292d2c"/><stop offset=".445" stop-color="#f0dfb8"/><stop offset=".47" stop-color="#dce8d8"/><stop offset=".52" stop-color="#535e54"/><stop offset=".70" stop-color="#1d3730"/><stop offset=".88" stop-color="#7dbba1"/><stop offset="1" stop-color="#d4a567"/></linearGradient><linearGradient id="chrome-edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efadbf"/><stop offset=".46" stop-color="#e8e8d4"/><stop offset=".54" stop-color="#4f6659"/><stop offset="1" stop-color="#80bc9c"/></linearGradient><filter id="pvc-refraction"><feTurbulence type="fractalNoise" baseFrequency=".006 .013" numOctaves="2" seed="8" result="ripple"/><feDisplacementMap in="SourceGraphic" in2="ripple" scale="18" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation="3 1"/></filter></svg><div class="video-background"><video id="background-video" muted loop playsinline preload="none" poster="assets/backdrop-v32-poster.webp" disablepictureinpicture tabindex="-1"><source src="assets/backdrop-v32-mobile.mp4" media="(max-width: 600px)" type="video/mp4"><source src="assets/backdrop-v32-desktop.mp4" type="video/mp4"></video></div><div class="light-wash"></div><div class="pvc-folds"></div><div class="glass-refraction"></div><div class="crt-surface"></div></div><header class="site-header"><div class="site-identity"><a class="wordmark" href="#gallery" aria-label="回到胶卷中心"><span class="chrome-word">Back to <span class="wordmark-year">2005</span></span></a><span class="header-note">Tropicalfish Portfolio</span></div><button id="download-resume" title="下载 AI 导演简历（PDF）">Download Resume <span aria-hidden="true">↗</span></button><span id="resume-status" role="status" aria-live="polite"></span></header>
+<main class="gallery" id="gallery" tabindex="0" role="region" aria-label="胶片浏览，使用左右方向键或左右滑动切换，回车打开当前胶片">
+  <div class="sticker-layer" aria-hidden="true"></div>
+  <canvas id="film-canvas" aria-hidden="true" hidden></canvas>
+  <div class="fallback-film" id="fallback-film"><div class="fallback-card"><div class="fallback-inside"><h1>作品档案</h1><p></p></div></div></div>
+  <p class="sr-only" id="current-description" aria-live="polite">影像作品胶卷，左右滑动浏览，点击作品查看详情。</p>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><button id="motion-toggle" aria-label="暂停胶片动态" aria-pressed="false"><i aria-hidden="true"></i><span id="motion-label">MOTION ON</span></button></div></footer></div>
+
+<dialog id="frame-dialog" class="detail-view" aria-labelledby="detail-title"><div id="detail-stage"><div class="detail-background" aria-hidden="true" inert><video id="detail-background-video" muted loop playsinline preload="none" disablepictureinpicture tabindex="-1" data-poster="assets/detail-backdrop-v33-poster.webp"><source data-src="assets/detail-backdrop-v33-mobile.mp4" media="(max-width: 600px)" type="video/mp4"><source data-src="assets/detail-backdrop-v33-desktop.mp4" type="video/mp4"></video></div>
+ <div class="detail-topbar"><button id="back-to-film" aria-label="返回胶片">← BACK TO FILM <span>返回胶片</span></button><button id="detail-next" aria-label="查看下一个作品">NEXT →</button></div>
+ <div class="project-layout">
+  <aside class="project-info"><div class="cover-slot"><img id="detail-cover" alt="作品封面" hidden><span id="cover-empty">封面待加入</span></div><h2 id="detail-title">作品</h2><p id="detail-tags"></p><p id="detail-copy"></p></aside>
+  <section class="project-media" aria-label="作品视频"><div id="video-slot" class="video-slot"><video id="project-video" controls playsinline preload="metadata" hidden></video><button type="button" id="project-seek-status" class="project-seek-status" aria-live="polite" hidden></button><div id="video-empty"><span>视频待加入</span></div></div></section>
+  <aside class="project-tools"><h3>使用模型</h3><div id="detail-models"></div></aside>
+ </div>
+</div></dialog>
+<script src="portfolio-data.js?v=38"></script><script src="sticker-assets.js?v=38"></script><script src="vendor/hls-1.6.15.min.js?v=38"></script><script src="project-stream.js?v=38"></script><script src="app.js?v=38"></script>
+</body></html>
